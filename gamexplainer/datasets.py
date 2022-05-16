@@ -2,28 +2,10 @@ from collections.abc import Callable
 from typing import Optional, Any
 
 import numpy as np
-import pandas
 import pandas as pd
 import os
 
 CD = os.path.dirname(os.path.realpath(__file__))
-
-# Datasets paths
-
-CONCRETE_DATASET_PATH = os.path.join(CD, "datasets_csv", "concrete.csv")
-YPMSD_DATASET_PATH = os.path.join(CD, "datasets_csv", "YearPredictionMSD.csv")
-BREAST_CANCER_DATASET_PATH = os.path.join(CD, "datasets_csv", "wdbc.csv")
-BIKE_SHARING_DATASET_PATH = os.path.join(CD, "datasets_csv", "bike_sharing.csv")
-HOUSE_PRICES_DATASET_PATH = os.path.join(CD, "datasets_csv", "housing.csv")
-FOREST_FIRE_DATASET_PATH = os.path.join(CD, "datasets_csv", "forestfires.csv")
-PARKINSON_DATASET_PATH = os.path.join(CD, "datasets_csv", "parkinson.csv")
-CREDIT_CARD_DATASET_PATH = os.path.join(CD, "datasets_csv", "creditcard.csv")
-ABALONE_DATASET_PATH = os.path.join(CD, "datasets_csv", "abalone.csv")
-ADULT_DATASET_PATH = os.path.join(CD, "datasets_csv", "adult.csv")
-AUDIT_DATASET_PATH = os.path.join(CD, "datasets_csv", "audit.csv")
-BANK_DATASET_PATH = os.path.join(CD, "datasets_csv", "bank.csv")
-GARMENTS_WORKER_PRODUCTIVITY_DATASET_PATH = os.path.join(CD, "datasets_csv", "garments_worker_productivity.csv")
-VOTES_DATASET_PATH = os.path.join(CD, "datasets_csv", "votes.csv")
 
 
 def dataset_from_fun(n_sample: int,
@@ -67,20 +49,3 @@ def dataset_from_fun(n_sample: int,
     res = pd.DataFrame(np.append(samples, label, axis=1), columns=cols)
 
     return res
-
-
-# real-world datasets as pandas dataframe
-
-concrete = pandas.read_csv(CONCRETE_DATASET_PATH, sep=";")
-breast_cancer = pandas.read_csv(BREAST_CANCER_DATASET_PATH, sep=",")
-bike_sharing = pandas.read_csv(BIKE_SHARING_DATASET_PATH, sep=",")
-house_prices = pandas.read_csv(HOUSE_PRICES_DATASET_PATH, delim_whitespace=True)
-forest_fire = pandas.read_csv(FOREST_FIRE_DATASET_PATH, sep=",")
-parkinson = pandas.read_csv(PARKINSON_DATASET_PATH, sep=",")
-credit_card = pandas.read_csv(CREDIT_CARD_DATASET_PATH, sep=",")
-abalone = pandas.read_csv(ABALONE_DATASET_PATH, sep=",")
-adult = pandas.read_csv(ADULT_DATASET_PATH, sep=",")
-audit = pandas.read_csv(AUDIT_DATASET_PATH, sep=",")
-bank = pandas.read_csv(BANK_DATASET_PATH, sep=",")
-garments_worker_productivity = pandas.read_csv(GARMENTS_WORKER_PRODUCTIVITY_DATASET_PATH, sep=",")
-votes = pandas.read_csv(VOTES_DATASET_PATH, sep=",")

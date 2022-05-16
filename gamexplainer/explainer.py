@@ -488,6 +488,7 @@ class GamExplainer:
 
         # sample the thresholds
         self.sampled = self.sample_method_map[self.sample_method](self.feature_dict, self.sample_n)
+        self.sampled = {key: np.unique(sampled_values) for key, sampled_values in self.sampled.items()}
 
         for feat_name in self.forest.feature_names():
             if feat_name not in self.sampled:

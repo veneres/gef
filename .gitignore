@@ -2,3 +2,15 @@
 docs/
 
 gamexplainer/__pycache__/
+
+examples/synthetic/precomputed_results/
+
+examples/synthetic/plots/
+
+examples/real-world-data/census/plots/
+
+examples/real-world-data/census/precomputed/
+
+examples/real-world-data/superconduct/plots/
+
+examples/real-world-data/superconduct/precomputed/

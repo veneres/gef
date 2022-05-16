@@ -1,0 +1,8 @@
+{
+  "model_path": "precomputed/forest.lgbm",
+  "feat_sel_out": "precomputed/feat_selection",
+  "sampling_analysis_out": "precomputed/sampling_comparison.pickle",
+  "explainer_out": "precomputed/explainer.pickle",
+  "shap_explainer_out": "precomputed/shap_explainer_training.pickle",
+  "shap_values_out": "precomputed/shap_values_training.pickle"
+}

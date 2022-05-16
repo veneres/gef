@@ -19,7 +19,7 @@ class TestSampling(TestCase):
         thresholds_dict = {
             "f1": [1, 5, 10, 15, 20],
             "f2": [1, 0.5, -0.5, -1],
-            "f3": [4, 8, 16, 32, 64, 128, 256]
+            "f3": [4, 8, 16, 32, 64, 64, 128, 256]
         }
         self.thresholds_dict = thresholds_dict
 
@@ -46,7 +46,6 @@ class TestSampling(TestCase):
             expected_max = max(f_min_max[key])
             self.assertAlmostEqual(expected_min, min(sampled_values))
             self.assertAlmostEqual(expected_max, max(sampled_values))
-
             # check all the midpoints
             for i in range(len(values) - 1):
                 mid_point = (values[i] + values[i + 1]) / 2

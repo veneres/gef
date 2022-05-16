@@ -1,0 +1,10 @@
+{
+  "no_inter_model_path": "precomputed_results/no_inter_forest.lgbm",
+  "no_inter_test_X": "precomputed_results/no_inter_test_x.npy",
+  "no_inter_test_y": "precomputed_results/no_inter_test_y.npy",
+  "no_inter_explainer": "precomputed_results/no_inter_explainer.pickle",
+  "bench_n_inter": 3,
+  "bench_inter_out": "precomputed_results/inter_strategies_bench.pickle",
+  "sampling_comparison_path": "precomputed_results/sampling_comparison.pickle",
+  "sampling_comparison_var_path": "precomputed_results/sampling_comparison_var.pickle"
+}
